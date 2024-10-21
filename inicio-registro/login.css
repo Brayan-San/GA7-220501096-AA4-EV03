@@ -1,0 +1,274 @@
+/* Estilos generales para la página de inicio de sesión y registro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Estilos de toda la página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/img-n\ \(4\).jpg) no-repeat; 
+    background-size: cover;
+    background-color: #355683; 
+}
+
+/* Contenedor principal que tiene los formularios de incio de sesion y registro */
+.container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    perspective: 1000px; /* Efecto 3D para la rotación */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Diseño de los fondos, formularios */
+.fondo-login {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 18px;
+    padding: 30px 40px;
+    backface-visibility: hidden; /* Oculta el reverso durante la rotación */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: absolute;
+}
+
+/* Posicionamiento inicial de los formularios */
+#login-form {
+    transform: rotateY(0deg);
+}
+
+#register-form {
+    transform: rotateY(180deg); /* Inicialmente oculto */
+}
+
+/* Clases para mostrar/ocultar formularios */
+.container.show-register #login-form {
+    transform: rotateY(-180deg);
+}
+
+.container.show-register #register-form {
+    transform: rotateY(0deg);
+}
+
+/* Estilos para los títulos de los formularios */
+.fondo-login h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Contenedor para los campos de entrada */
+.fondo-login .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+/* Estilos para los campos de entrada */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+/* Estilo para el placeholder de los campos de entrada */
+.input-box input::placeholder {
+    color: #ffffff;
+}
+
+/* Posicionamiento de los iconos dentro de los campos de entrada */
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* Estilos para la sección "Recordar contraseña" */
+.fondo-login .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+/* Estilos para el checkbox de "Recordar datos" */
+.remember-forgot label input {
+    accent-color: #ffffff;
+    margin-right: 3px;
+}
+
+/* Estilos para los enlaces */
+.remember-forgot a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.remember-forgot a:hover { 
+    text-decoration: underline;
+}
+
+/* Estilos para el botón principal */
+.fondo-login .btn {
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Estilos para el enlace de registro */
+.fondo-login .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste específico para el enlace de "Volver" */
+.volver-link {
+    margin-left: -10px !important;
+    display: inline-block;
+}
+
+/* Estilos para mensajes de error */
+.mensaje-error {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Estilos para botones de redes sociales */
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-login p {
+    font-size: 14.5px;
+    color: #fff;
+}
+
+.social-login .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: background-color 0.3s;
+}
+
+.social-login .google-btn {
+    background: #db4437;
+    color: #fff;
+}
+
+.social-login .facebook-btn {
+    background: #3b5998;
+    color: #fff;
+}
+
+.social-login .twitter-btn {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.social-login .btn i {
+    font-size: 20px;
+}
+
+.social-login .btn:hover {
+    opacity: 0.9;
+}
+
+/* Estilos para el indicador de fortaleza de contraseña */
+.password-strength {
+    margin-top: 5px;
+    height: 8px;
+    width: 80%;
+    background: #ddd;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.password-strength::before {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.25s;
+}
+
+.password-strength.weak::before {
+    width: 33.33%;
+    background-color: #ff4757;
+}
+
+.password-strength.medium::before {
+    width: 66.66%;
+    background-color: #ffa502;
+}
+
+.password-strength.strong::before {
+    width: 100%;
+    background-color: #2ed573;
+}
+
+.password-message {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}

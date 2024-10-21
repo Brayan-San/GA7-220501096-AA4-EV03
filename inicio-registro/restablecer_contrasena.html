@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña - Tienda Force Sport</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Fondo del formulario de restablecimiento de contraseña -->
+        <div class="fondo-login">
+            <!-- Formulario de restablecimiento de contraseña -->
+            <form action="../basedatos/restablecer_contrasena.html" method="post">
+                <h1>Restablecer Contraseña</h1>
+                <!-- Campo oculto para el token de restablecimiento -->
+                <input type="hidden" name="token" value="<?html echo htmlspecialchars($_GET['token']); ?>">
+                <!-- Campo de entrada para la nueva contraseña -->
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Ingrese su nueva clave" required> 
+                </div>
+                <!-- Botón para enviar el formulario -->
+                <button type="submit" class="btn">Restablecer Contraseña</button>
+                <!-- Enlace para volver a la página de inicio de sesión -->
+                <div class="register-link">
+                    <p>¿Ya restableció la contraseña? <a href="/tienda-virtual-force-sport-pagina-web/login y registro/login.html">Iniciar sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Force Sport</title>
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inicio">
+    <header>
+        <div class="header-container">
+            <!-- Título principal de la tienda -->
+            <h1 class="header-title">Tienda Force Sport</h1>
+            <!-- Menú de navegación principal -->
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="catalogo.html">CATÁLOGO</a></li>
+                    <li><a href="sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+                </ul>
+            </nav>
+            <!-- Formulario de búsqueda -->
+            <form class="search-form">
+                <input type="search" placeholder="Buscar..."/>
+                <button class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <!-- Contenedor del icono del carrito -->
+            <div class="container-icon">
+                <!-- SVG del icono del carrito -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                </svg>
+                <!-- Contador de productos en el carrito -->
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+                <!-- Contenedor del carrito (inicialmente oculto) -->
+                <div class="container-cart-products hidden-cart" id="carrito">
+                    <div class="cart-total">
+                        <h3>Total:</h3>
+                        <span class="total-pagar" id="total-pagar">$0</span>
+                    </div>
+                    <button id="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Formulario para el icono de usuario y cierre de sesión -->
+        <form class="header-container-icon-login" onsubmit="return false;">
+            <div class="container-icon" onclick="window.location.href='login y registro/login.html'">
+                <!-- SVG del icono de usuario -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke-width="1.5" stroke="currentColor" class="icon-user">
+                    <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/>
+                </svg>
+                <!-- Enlace para cerrar sesión -->
+                <div class="logout">
+                    <a href="/tienda-virtual-force-sport-pagina-web/basedatos/logout.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </form>
+    </header>
+    <main>
+        <!-- Sección de bienvenida -->
+        <div class="bienvenidos">
+            <h2>Bienvenidos</h2>
+            <p class="texto-bienvenidos">En Force Sport, somos apasionados del deporte y nos comprometemos a ofrecer la mejor experiencia a nuestros clientes. Disfruta de una amplia variedad de productos de las mejores marcas, para que encuentres todo lo que necesitas para alcanzar tus metas deportivas. Te ofrecemos precios competitivos, atención personalizada y una experiencia de compra fácil y segura.</p>
+            <!-- Botón para visitar el catálogo -->
+            <div class="btn-box">
+                <a href="catalogo.html">👉Visita el catálogo👈</a>
+            </div>
+        </div>
+    </main>
+    <!-- Enlace al archivo JavaScript -->
+    <script src="indexjs.js"></script>
+</body>
+</html>

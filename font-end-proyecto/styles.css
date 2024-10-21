@@ -1,0 +1,478 @@
+/* Estilos globales para toda la web */
+
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Estilos generales para el body */
+body {
+    margin: 0 auto;
+    max-width: 1180px;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    background-color: hwb(90 98% 0%);
+}
+
+/* Estilo para el título principal */
+header h1 {
+    font-size: 24px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 45px;
+    background-color: #ffffff;
+}
+
+/* Estilos para la sección "Sobre Nosotros" */
+.sobre-nosotros {
+    padding: 60px;
+    background-color: #03af4500;
+    border-radius: 10px;
+    width: 800px;
+    text-align: center;
+    position: relative;
+    left: 315px;
+    top: 55px;
+}
+
+.texto-sobre-nosotros {
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilos para el menú de navegación */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+header nav ul li {
+    font-size: 1.2rem;
+    font-weight: 580;
+}
+
+/* Estilos para los enlaces del menú */
+.header-menu ul li a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Estilo para el hover: cambiar color del texto */
+.header-menu ul li a:hover {
+    color: #2bb302;
+}
+
+/* Efecto de subrayado en hover */
+.header-menu ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #31d300;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Animación del subrayado en hover */
+.header-menu ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para el formulario de búsqueda */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Agregar margen a los elementos */
+.header-menu ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.search-form input {
+    font-family: inherit;
+    border: 3px solid #000000;
+    border-radius: 1rem;
+    width: 15rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #ffffff;
+}
+
+.search-form button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+}
+
+/*icono del carrito*/
+.icon-cart {
+    width: 40px;
+    height: 40px;
+    stroke: #000000;
+    /*margin-left: -5px;*/
+}
+
+.icon-cart:hover {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header - titulo de la pagina - diseño. Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0 45px 0;
+}
+
+/*toda la parte del header- menu de navegacion*/
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    gap: 30px;
+    /*background-color: #31d300;*/
+    position: relative;
+}
+/* caracteristicas de la barra de busqueda */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 3px solid #000000;
+    border-radius: 1rem;
+}
+
+/*tamaño de de la barra de busqueda y demas*/
+.search-form input {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 15rem; /*tamaño horizontal*/
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #000000;
+}
+
+.container-icon {
+    position: relative;
+}
+
+/*circulo contador del carrito*/
+.count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #000000;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/*tamaño del numero del contador del carrito*/
+#contador-productos {
+    font-size: 10px;
+}
+
+/* Estilos para el contenedor del carrito */
+.container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    width: 300px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.37);
+    /*sombra del menu compra*/
+    border-radius: 13px;
+    /*borde redondo del menu compra*/
+}
+
+/* Estilos para los productos en el carrito */
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito {
+    font-size: 18px;
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Estilos para el icono de cerrar en el carrito */
+.icon-close {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover {
+    stroke: red;
+    cursor: pointer;
+}
+
+/* Estilos para el total del carrito */
+.cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart {
+    display: none;
+}
+
+/*boton comprar diseños*/
+#btn-comprar {
+    display: block;
+    width: calc(100% - 60px);
+    margin: 18px auto;
+    padding: 15px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btn-comprar:hover {
+    background-color: #31d300;
+    transform: scale(1.05);
+}
+
+#btn-comprar:active {
+    background-color: #31d300;
+}
+
+/* Estilos para el contenedor de items (productos) */
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(4, 5fr);
+    gap: 40px;
+}
+
+.item {
+    border-radius: 15px;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(161, 165, 157, 0.555);
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+/* Estilos para la información del producto */
+.info-product {
+    padding: 15px 30px;
+    font-size: 17px;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.info-product button {
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.info-product button:hover {
+    background-color: #333;
+}
+
+/*presentacion de inicio*/
+main {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    color: #000;
+    max-width: 500px;
+}
+
+/* Estilos específicos para el contenedor "bienvenidos" */
+.bienvenidos {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-left: 0;
+    max-width: 600px;
+    text-align: center;
+}
+
+.bienvenidos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.bienvenidos p.texto-bienvenidos {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.bienvenidos .btn-box {
+    margin-top: 15px;
+}
+
+.bienvenidos .btn-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #31d300;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 9px;
+    transition: background-color 0.3s;
+}
+
+.bienvenidos .btn-box a:hover {
+    background-color: #005c23
+}
+
+.bienvenidos a {
+    color: #000;
+}
+
+
+
+/* Mover la imagen hacia la derecha */
+.image-container.right {
+    left: 350px
+}
+
+.image-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+/*icono del inicio de sesion*/
+.header-container-icon-login {
+    width: 35px;
+    height: 35px;
+    stroke: #000000;
+    margin-left: -40px;
+    position: relative;
+    top: 07px;
+}
+
+.header-container-icon-login {
+    cursor: pointer;
+}
+
+/* Estilos para el botón de cierre de sesión */
+.logout {
+    display: inline-block;
+    padding: 1px 10px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+    left: 45px;
+    top: -40px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: inherit; /* Usar color heredado del padre */
+    font-size: 13px;
+    display: block;
+}
+
+.logout:hover {
+    background-color: #2bb302; /* Fondo verde */
+    color: #000000; /* Texto negro */
+    transform: scale(1.1);
+}

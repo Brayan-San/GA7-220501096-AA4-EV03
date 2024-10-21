@@ -1,0 +1,86 @@
+<?html
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Force Sport</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Contenedor principal que contiene los formularios -->
+    <div class="container">
+        <!-- Formulario de inicio de sesión -->
+        <div class="fondo-login" id="login-form">
+            <form action="/tienda-virtual-force-sport-pagina-web/basedatos/iniciar_sesion.html" method="post">
+                <h1>Inicio de sesión</h1>
+                <!-- Campo de entrada para el nombre de usuario -->
+                <div class="input-box">
+                    <input type="text" name="Nombre_de_usuario" placeholder="Nombre de usuario" required> 
+                    <i class='bx bxs-user'></i>
+                </div>      
+                <!-- Campo de entrada para la contraseña -->
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <!-- Opciones de recordar datos y recuperar contraseña -->
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Recordar datos</label>
+                    <a href="recuperar_clave.html">¿Ha olvidado su contraseña?</a>
+                </div>
+                <!-- Botón de inicio de sesión -->
+                <button type="submit" class="btn">Inicio de sesión</button>
+                <!--botones para redes sociales -->
+                <div class="social-login">
+                    <p>Inicie sesión con</p>
+                    <a href="/tienda-virtual-force-sport-pagina-web/basedatos/callback_google.html" class="btn google-btn"><i class='bx bxl-google'></i></a>
+                    <a href="/tienda-virtual-force-sport-pagina-web/basedatos/callback_facebook.html" class="btn facebook-btn"><i class='bx bxl-facebook'></i></a>
+                    <a href="/tienda-virtual-force-sport-pagina-web/basedatos/callback_twitter.html" class="btn twitter-btn"><i class='bx bxl-twitter'></i></a>
+                </div>
+                <!-- Enlace para registrarse -->
+                <div class="register-link">
+                    <p>¿No tiene cuenta?<a href="#" id="show-register">Registrese</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Formulario de registro -->
+        <div class="fondo-login hidden" id="register-form">
+            <form action="/tienda-virtual-force-sport-pagina-web/basedatos/registrar.html" method="post">
+                <h1>Registrese aqui</h1>
+                <!-- Campo de entrada para el nombre de usuario -->
+                <div class="input-box">
+                    <input type="text" name="Nombre_de_usuario" placeholder="Nombre de usuario" required> 
+                    <i class='bx bxs-user'></i>
+                </div>      
+                <!-- Campo de entrada para el correo electronico -->
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <!-- Campo de entrada para la contraseña -->
+                <div class="input-box">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <!-- nivel de seguridad contraseña-->
+                <div id="password-strength" class="password-strength"></div>
+                <div id="password-message" class="password-message"></div>
+                <!-- Botón de registro -->
+                <button type="submit" class="btn">registrar</button>
+                <!-- Enlace para volver al inicio de sesión -->
+                <div class="register-link">
+                    <p>¿Ya tiene una cuenta?<a href="#" id="show-login">Inicio de sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Script JavaScript para la funcionalidad de la página -->
+    <script src="login.js"></script>
+</body>
+</html>
